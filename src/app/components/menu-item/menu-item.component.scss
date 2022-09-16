@@ -1,0 +1,25 @@
+li.nav-item {
+    font-size: 18px;
+}
+
+li.nav-item a:hover {
+    background-color: rgba(255, 255, 255, .1);
+    color: #fff;
+}
+
+li.nav-item i.nav-icon {
+    margin-left: 0.05rem;
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+    text-align: center;
+    width: 1.6rem;
+}
+
+li.nav-item i.null-icon {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}

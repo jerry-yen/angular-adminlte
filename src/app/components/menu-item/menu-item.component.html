@@ -1,0 +1,14 @@
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon {{menu_item.icon}}" [ngClass]="{'null-icon':menu_item.icon===undefined}"></i>
+        <p>
+            {{menu_item.title}}
+            <i class="right fas fa-angle-left"
+                *ngIf="menu_item.sub_menu_items != undefined && menu_item.sub_menu_items.length > 0"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview" *ngIf="menu_item.sub_menu_items != undefined && menu_item.sub_menu_items.length > 0">
+        <app-menu-item *ngFor="let menu_item of menu_item.sub_menu_items" [menu_item]="menu_item">
+        </app-menu-item>
+    </ul>
+</li>
