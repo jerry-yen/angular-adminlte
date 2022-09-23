@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
@@ -11,14 +12,39 @@ export class FormComponent implements OnInit {
   title?: string = '未命名'
 
   // 欄位元件
-  components? : Component
+  components: ComponentMetadata[] = [];
 
   // 按鈕元件
-  buttons? : Component
+  buttons: Component[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+
+
+  }
 
   ngOnInit(): void {
+    this.http.get<FormMetadata>('http://microlink.chihsin.com/api/admin/form').subscribe(data => {
+      if (data.status == 'success') {
+        for (let key in data.metadata.fields) {
+          console.log(data.metadata.fields[key].type);
+          this.components.push(data.metadata.fields[key]);
+        }
+      }
+      console.log(this.components);
+    });
   }
+
+}
+
+export interface FormMetadata {
+  metadata: any;
+  status: string;
+}
+
+export interface ComponentMetadata {
+  type: string;
+  name: string;
+  label: string;
+  placeholder: string;
 
 }

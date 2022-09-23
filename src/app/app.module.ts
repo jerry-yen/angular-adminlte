@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { StickyComponent } from './components/sticky/sticky.component';
 import { FormComponent } from './widgets/form/form.component';
 import { DataComponent } from './widgets/data/data.component';
+import { TextComponent } from './components/text/text.component';
 
 @NgModule({
   declarations: [
@@ -35,10 +37,12 @@ import { DataComponent } from './widgets/data/data.component';
     StickyComponent,
     FormComponent,
     DataComponent,
+    TextComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
