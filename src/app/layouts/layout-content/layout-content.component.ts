@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutContentComponent implements OnInit {
 
+  // 頁面標題
+  title?: string = '未命名'
+
   constructor() { }
 
   ngOnInit(): void {

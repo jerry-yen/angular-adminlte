@@ -14,6 +14,9 @@ import { MenuDropdownUserinfoComponent } from './widgets/menu-dropdown-userinfo/
 import { SideMenuComponent } from './widgets/side-menu/side-menu.component';
 import { LayoutPreloaderComponent } from './layouts/layout-preloader/layout-preloader.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import { StickyComponent } from './components/sticky/sticky.component';
+import { FormComponent } from './widgets/form/form.component';
+import { DataComponent } from './widgets/data/data.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
     MenuDropdownUserinfoComponent,
     SideMenuComponent,
     LayoutPreloaderComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    StickyComponent,
+    FormComponent,
+    DataComponent,
   ],
   imports: [
     BrowserModule,
